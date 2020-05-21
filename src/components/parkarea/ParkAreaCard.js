@@ -14,7 +14,7 @@ const ParkAreaCard = (props) => {
         <h3>Attractions:</h3>
         <ul>
           {props.parkarea.attractions.map((attraction) => (
-            <li key={attraction.name} attraction={attraction} {...props}>
+            <li key={attraction.name} attraction={attraction}>
               {attraction.name}
             </li>
           ))}

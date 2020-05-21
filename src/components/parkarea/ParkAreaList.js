@@ -20,23 +20,11 @@ const ParkAreaList = (props) => {
     getParkAreas();
   }, []);
 
-  let areaAttractions = [];
-  for (let area of parkareas) {
-    areaAttractions.push(area.attractions);
-  }
-
-  console.log(areaAttractions);
-
   return (
     <>
       <div className="container-cards">
         {parkareas.map((parkarea, areaAttractions) => (
-          <ParkAreaCard
-            key={parkarea.id}
-            parkarea={parkarea}
-            attractions={areaAttractions}
-            {...props}
-          />
+          <ParkAreaCard key={parkarea.id} parkarea={parkarea} {...props} />
         ))}
       </div>
     </>
