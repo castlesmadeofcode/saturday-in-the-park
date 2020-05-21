@@ -1,9 +1,10 @@
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import React from "react";
 import { withRouter } from "react-router-dom";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import ParkAreaList from "./parkarea/ParkAreaList";
+import ItineraryList from "./itinerary/ItineraryList";
 
 const ApplicationViews = () => {
   // const hasUser = props.hasUser;
@@ -14,11 +15,7 @@ const ApplicationViews = () => {
         exact
         path="/"
         render={(props) => {
-          // if (hasUser) {
           return <ParkAreaList {...props} />;
-          // } else {
-          //   return <Redirect to="/login" />;
-          // }
         }}
       />
 
@@ -49,7 +46,7 @@ const ApplicationViews = () => {
         render={(props) => {
           return (
             <>
-              <h1>Placeholder for user's itinerary</h1>
+              <ItineraryList {...props} />
             </>
           );
         }}

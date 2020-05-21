@@ -23,7 +23,7 @@ const ParkAreaList = (props) => {
   return (
     <>
       <div className="container-cards">
-        {parkareas.map((parkarea, areaAttractions) => (
+        {parkareas.map((parkarea) => (
           <ParkAreaCard key={parkarea.id} parkarea={parkarea} {...props} />
         ))}
       </div>
