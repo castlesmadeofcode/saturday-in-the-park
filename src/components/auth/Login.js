@@ -25,7 +25,7 @@ const Login = (props) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json",
+        Accept: "application/json",
       },
       body: JSON.stringify(customer),
     })
@@ -34,9 +34,9 @@ const Login = (props) => {
         console.log(parsedResponse);
         if ("token" in parsedResponse) {
           sessionStorage.setItem("kennywood-token", parsedResponse.token);
-          props.history.push("/")
+          props.history.push("/");
         }
-      })
+      });
   };
 
   return (
